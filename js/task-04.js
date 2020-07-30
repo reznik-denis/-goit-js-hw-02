@@ -1,34 +1,23 @@
-const orderPieces = 4;
+// Форматирование строки в зависимости от длинны строки
+// Напиши функцию formatString(string, maxLength = 40) которая принимает строку и форматирует ее если необходимо.
 
-const credits = 23580;
-const pricePerDroid = 3000;
-const CANCELED_BY_USER = 'Отменено пользователем!';
-const ACCESS_DENIED = 'Недостаточно средств на счету!';
-
-let totalPrice = orderPieces * pricePerDroid; // Write code in this line
-let balanceСredit = credits - totalPrice; // Write code in this line
-let message;
-
-if (orderPieces === null) {
-    message = CANCELED_BY_USER;
-} else if (totalPrice <= credits) {
-    message = `Вы купили ${orderPieces} дроидов, на счету осталось ${balanceСredit} кредитов`;
-} else {
-    message = ACCESS_DENIED;
-} 
-// Write code under this line
+// Если длина строки не превышает maxLength, функция возвращает ее в исходном виде.
+// Если длина больше maxLength, то функция обрезает строку до размера maxLength символов и добавляет в конец строки троеточие ..., после чего возвращает укороченную версию.
 
 
-console.log(message);
+function formatString(string, maxLength = 40) {
+    // Write code under this line
+    if (string.length > maxLength) {
+        string = string.slice(0, maxLength) + '...'
+    }
+return string
+}
 
-//если orderPieces равно 4
-// то значение message будет равно
-// 'Вы купили 4 дроидов, на счету осталось 11580 кредитов'
+// console.log(formatString('Curabitur ligula sapien, tincidunt non.'));
+// 'Curabitur ligula sapien, tincidunt non.'
 
-//если orderPieces равно null
-// то значение message будет равно
-// 'Отменено пользователем!'
+console.log(formatString('Vestibulum facilisis, purus nec pulvinar iaculis.'));
+// 'Vestibulum facilisis, purus nec pulvinar...'
 
-//если orderPieces равно 10
-// то значение message будет равно
-// 'Недостаточно средств на счету!'
+//console.log(formatString('Vestibulum facilisis, purus nec pulvinar iaculis.', 30));
+// 'Vestibulum facilisis, purus ne...'
