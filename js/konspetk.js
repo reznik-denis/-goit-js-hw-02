@@ -77,20 +77,49 @@
 //     console.log(`Число больше чем ${threshold}: ${numbers[i]}`); // 18, 29, 34
 // }
 
-const matrix = [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9],
-];
-let total = 0;
+// const matrix = [
+//     [1, 2, 3],
+//     [4, 5, 6],
+//     [7, 8, 9],
+// ];
+// let total = 0;
 
-for (let i = 0; i < matrix.length; i += 1) {
-    console.log('Подмассив матрицы matrix[i]: ', matrix[i]);
+// for (let i = 0; i < matrix.length; i += 1) {
+//     console.log('Подмассив матрицы matrix[i]: ', matrix[i]);
 
-    for (let j = 0; j < matrix[i].length; j += 1) {
-        console.log('Элемент подмассива матрицы matrix[i][j]: ', matrix[i][j]);
-        total += matrix[i][j];
-    }
-}
+//     for (let j = 0; j < matrix[i].length; j += 1) {
+//         console.log('Элемент подмассива матрицы matrix[i][j]: ', matrix[i][j]);
+//         total += matrix[i][j];
+//     }
+// }
 
-console.log(total); // 45
+// console.log(total); // 45
+
+// тренировка разных задачек
+
+// Даны два массива: [1, 2, 3] и[4, 5, 6].Объедините их вместе.
+
+// const fistMath = [1, 2, 3];
+// const twoMath = [4, 5, 6];
+// const sumMath = fistMath.concat(twoMath);
+// console.log(sumMath);
+// const resMath = twoMath.reverse();
+// console.log(resMath);
+// twoMath.unshift(8, 9, 4);
+// console.log(twoMath);
+// // console.log(twoMath.shift())
+// // console.log(twoMath.slice(2))
+// console.log(twoMath.splice(1, 2));
+// console.log(twoMath);
+// twoMath.splice(3, 0, 4, 76, 34);
+// console.log(twoMath);
+// const g = [3, 4, 1, 2, 7];
+// g.sort();
+// console.log(g)
+
+//Дана строка. Сделайте заглавным первый символ этой строки не используя цикл. Найдите два решения.
+
+const a = 'какая то строка, где нужно сделать первое слово заглавным'
+
+a.toUpperCase();
+console.log(a.toUpperCase())
